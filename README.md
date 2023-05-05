@@ -26,6 +26,7 @@ Simply reimplement the functions
 - `user_implementation_mul` for matrix multiplication
 - `user_implementation_add` for adding values to the crossbar conductances
 - `user_implementation_write` for writing an array of values to the crossbar array
+
 by calling your own functions that executes the operations on the crossbar array within.
 Recompile the code using `gcc -shared -fPIC -o libfuncs.so xla_interface.c user_implementation.h` and you should be able to use the `MemristiveCrossbarArray` class in your jax usecases (e.g. the example scripts.)
 
