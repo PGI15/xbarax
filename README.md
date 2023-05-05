@@ -28,7 +28,7 @@ Simply reimplement the functions
 - `user_implementation_write` for writing an array of values to the crossbar array
 
 by calling your own functions that executes the operations on the crossbar array within.
-Recompile the code using `gcc -shared -fPIC -o libfuncs.so xla_interface.c user_implementation.h` and you should be able to use the `MemristiveCrossbarArray` class in your jax usecases (e.g. the example scripts.)
+Recompile the code using `gcc -shared -fPIC -o libfuncs.so xla_interface.c user_implementation.h` and you should be able to use your crossbar via the `MemristiveCrossbarArray` class in your own jax usecases (e.g. the example scripts).
 
 ## Development
 
