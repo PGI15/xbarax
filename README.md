@@ -7,7 +7,7 @@ Clone the repository, install the requirements and compile the interface. You mi
 
 ```console
 git clone git@github.com:PGI15/xbarax.git
-pip install -r requirements.txt
+pip install -r xbarax/requirements.txt
 cd xbarax/xbarax/xla_crossbar_interface_singleBuf/
 gcc -shared -fPIC -o libfuncs.so xla_interface.c user_implementation.h
 ```
