@@ -1,10 +1,12 @@
 import functools as ft
+import tqdm
 import jax
 jax.config.update('jax_platform_name', 'cpu') # use cpu (xbar backend is only defined for cpu host)
 import jax.numpy as jnp
 from jax import jit
 import jax.random as jrandom
 import optax
+
 
 # Train the network
 USE_XBAR = True
@@ -87,7 +89,7 @@ def train_epoch(params, X, y, opt_state, key):
     perms = jrandom.permutation(key, len(X))
     loss_vals = []
     iter_ = 0
-    for i in range(0, len(X), BATCH_SIZE):
+    for i in tqdm.tqdm(range(0, len(X), BATCH_SIZE)):
         batch_idx = perms[i:i+BATCH_SIZE]
         batch_X, batch_y = X[batch_idx], y[batch_idx]
         new_params, opt_state, loss_val = update(params, batch_X, batch_y, opt_state)
