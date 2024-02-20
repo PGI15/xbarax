@@ -35,3 +35,21 @@ Recompile the code using `gcc -shared -fPIC -o libfuncs.so xla_interface.c user_
 We will keep updating the package for it to work with the latest jax version and we will improve documentation.
 
 ## Citation
+
+If you found this repository useful, please cite: ([link](https://dl.acm.org/doi/abs/10.1145/3589737.3605967))
+
+```
+@inproceedings{10.1145/3589737.3605967,
+  author = {Lohoff, Jamie and Yu, Zhenming and Finkbeiner, Jan and Kaya, Anil and Stewart, Kenneth and Wai Lui, Hin and Neftci, Emre},
+  title = {Interfacing Neuromorphic Hardware with Machine Learning Frameworks - A Review},
+  year = {2023},
+  isbn = {9798400701757},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  url = {https://doi.org/10.1145/3589737.3605967},
+  doi = {10.1145/3589737.3605967},
+  articleno = {16},
+  location = {, Santa Fe, NM, USA, },
+  series = {ICONS '23}
+}
+```
